@@ -154,6 +154,10 @@ void reservation(){
         }
 }
 
+void information(){
+    
+}
+
 int main(){
     string name ;
     string word ;
@@ -165,6 +169,7 @@ int main(){
     cout << "Hotel: Would you like a single or a double room? \n" ; 
     cout << "user: "; 
     getline(cin,word) ;
+    word = word + " " ;
     int end = word.find_first_of(" ") ;
     while(end != -1){
     if(word.substr(start,end-start) == "want"){
@@ -176,8 +181,8 @@ int main(){
         end = word.find_first_of(" ",start);
     }
     while(end != -1){
-    if(word.substr(start,end-start) == "description"){
-        cout << "bigloso" ;
+    if(word.substr(start,end-start) == "information"){
+        information() ;
         end = word.find_first_of(" ") ;
         break ;
         }
