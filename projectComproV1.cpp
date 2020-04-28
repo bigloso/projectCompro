@@ -155,6 +155,9 @@ void reservation(){
 }
 
 void information(){
+    cout << " Compro project Hotel " ;
+    cout << " A double room. 600 bath/night " ;
+    cout << " A twin room. 800 bath/night " ;
     
 }
 
