@@ -162,7 +162,7 @@ void information(){
 }
 
 int main(){
-    string name ;
+    string name , help ;
     string word ;
     int start = 0 ;
     Shownamehotel() ;
@@ -192,6 +192,26 @@ int main(){
         start = end+1 ;
         end = word.find_first_of(" ",start);
     }
-    
+    cout << "Hotel: Can i help you anything with?" ;
+    cout << "user: " ;
+    getline(cin,word) ;
+    word = word + " " ;
+        if(word.substr(start,end-start) == "reservation"){
+        reservation() ;
+        end = word.find_first_of(" ") ;
+        break ;
+        }
+        start = end+1 ;
+        end = word.find_first_of(" ",start);
+    }
+    while(end != -1){
+    if(word.substr(start,end-start) == "information"){
+        information() ;
+        end = word.find_first_of(" ") ;
+        break ;
+        }
+        start = end+1 ;
+        end = word.find_first_of(" ",start);
+    }
     return 0 ;
 }
