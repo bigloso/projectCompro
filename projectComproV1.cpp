@@ -146,7 +146,6 @@ void reservation(){
             cout<< space << "Price : "<<total<<" bath"<<endl ;
             cout << endl ;
             cout << space << "**************************************************************" << endl ;
-            cout << endl ;
         }
 }
 
@@ -203,6 +202,7 @@ int main(){
         }
         start = end+1 ;
         end = word.find_first_of(" ",start);
+        cout << endl ;
         cout << space << "Press Enter 1 times to exit the program.";
             cin.get();
             cin.get();
@@ -216,6 +216,7 @@ int main(){
         }
         start = end+1 ;
         end = word.find_first_of(" ",start);
+        cout << endl ;
         cout << space << "Press Enter 1 times to exit the program.";
             cin.get();
             cin.get();
@@ -223,4 +224,3 @@ int main(){
     }
     return 0 ;
 }
-
