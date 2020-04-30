@@ -12,14 +12,14 @@ using namespace std ;
 
 void Shownamehotel(){
 
-    cout << "                                                            **************************************************************\n" ;
-    cout << "                                                            * *  *                                                  *  * *\n" ;
-    cout << "                                                            **  *                                                    *  **\n" ;
-    cout << "                                                            * *                 Compro project Hotel                   * *\n";
-    cout << "                                                            **  *                                                    *  **\n" ;
-    cout << "                                                            * *  *                                                  *  * *\n" ;
-    cout << "                                                            **************************************************************\n" ;
-    
+    cout << "                             **************************************************************\n" ;
+    cout << "                             * *  *                                                  *  * *\n" ;
+    cout << "                             **  *                                                    *  **\n" ;
+    cout << "                             * *                 Compro project Hotel                   * *\n";
+    cout << "                             **  *                                                    *  **\n" ;
+    cout << "                             * *  *                                                  *  * *\n" ;
+    cout << "                             **************************************************************\n" ;
+
 }
 
 void moveText(string inputStr, int scrLen)
@@ -66,7 +66,7 @@ void moveText(string inputStr, int scrLen)
 void reservation(){
     int age , hmn , room , hmr ,room1 ,room2, sum1,sum2 ,total ,yn,g ;
     string name ,surname, wf ,number ;
-    string space = "                           " ;
+    string space = "                             " ;
     do
     {
         system("cls");
@@ -147,10 +147,6 @@ void reservation(){
             cout << endl ;
             cout << space << "**************************************************************" << endl ;
             cout << endl ;
-            cout << space << "Press Enter 1 times to exit the program.";
-            cin.get();
-            cin.get();
-            moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
         }
 }
 
@@ -158,19 +154,22 @@ void information(){
     cout << " Compro project Hotel " ;
     cout << " A double room. 600 bath/night " ;
     cout << " A twin room. 800 bath/night " ;
-    
+
 }
 
 int main(){
     string name , help ;
     string word ;
+    string space = "                             " ;
+    system("mode 0,0");
+    system("COLOR 3F");
     int start = 0 ;
     Shownamehotel() ;
-    cout << "Hotel: Hello Compro project Hotel. May I help you? \n";
-    cout << "user: "; 
-    getline(cin,help) ; 
-    cout << "Hotel: Would you like a single or a double room? \n" ; 
-    cout << "user: "; 
+    cout << space << "Hotel: Hello Compro project Hotel. May I help you? \n";
+    cout << space << "user : ";
+    getline(cin,help) ;
+    cout << space << "Hotel: Would you like a single or a double room? \n" ;
+    cout << space << "user : ";
     getline(cin,word) ;
     word = word + " " ;
     int end = word.find_first_of(" ") ;
@@ -192,8 +191,8 @@ int main(){
         start = end+1 ;
         end = word.find_first_of(" ",start);
     }
-    cout << "Hotel: Can i help you anything with?" ;
-    cout << "user: " ;
+    cout << space << "Hotel: Can i help you anything with? \n" ;
+    cout << space << "user : " ;
     getline(cin,word) ;
     word = word + " " ;
     while(end != -1){
@@ -204,6 +203,10 @@ int main(){
         }
         start = end+1 ;
         end = word.find_first_of(" ",start);
+        cout << space << "Press Enter 1 times to exit the program.";
+            cin.get();
+            cin.get();
+            moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
     while(end != -1){
     if(word.substr(start,end-start) == "information"){
@@ -213,6 +216,11 @@ int main(){
         }
         start = end+1 ;
         end = word.find_first_of(" ",start);
+        cout << space << "Press Enter 1 times to exit the program.";
+            cin.get();
+            cin.get();
+            moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
     return 0 ;
 }
+
