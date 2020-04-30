@@ -202,11 +202,11 @@ int main(){
         }
         start = end+1 ;
         end = word.find_first_of(" ",start);
-        cout << endl ;
-        cout << space << "Press Enter 1 times to exit the program.";
-            cin.get();
-            cin.get();
-            moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
+        // cout << endl ;
+        // cout << space << "Press Enter 1 times to exit the program.";
+        //     cin.get();
+        //     cin.get();
+        //     moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
     while(end != -1){
     if(word.substr(start,end-start) == "information"){
@@ -216,11 +216,11 @@ int main(){
         }
         start = end+1 ;
         end = word.find_first_of(" ",start);
-        cout << endl ;
-        cout << space << "Press Enter 1 times to exit the program.";
-            cin.get();
-            cin.get();
-            moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
+        // cout << endl ;
+        // cout << space << "Press Enter 1 times to exit the program.";
+        //     cin.get();
+        //     cin.get();
+        //     moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
     return 0 ;
 }
