@@ -160,6 +160,7 @@ void information(){
     cout << space << " A twin room. 800 bath/night " <<endl;
     cout << space << "Press 1 to exit " ;
     cin >> yes ;
+    cin.ignore() ;
 }
 
 int main(){
@@ -173,9 +174,6 @@ int main(){
     cout << space << "Hotel: Hello Compro project Hotel. May I help you? \n";
     cout << space << "user : ";
     getline(cin,word) ;
-    /*cout << space << "Hotel: Would you like a single or a double room? \n" ;
-    cout << space << "user : ";
-    getline(cin,word) ;*/
     word = word + " " ;
     int end = word.find_first_of(" ") ;
     while(end != -1){
@@ -200,8 +198,9 @@ int main(){
     cout << space << "Hotel: Can i help you anything with? \n" ;
     cout << space << "user : " ;
     getline(cin,word1) ;
-    end = word1.find_first_of(" ") ;
     word1 = word1 + " " ;
+    end = word1.find_first_of(" ") ;
+    start = 0 ;
     while(end != -1){
         if(word1.substr(start,end-start) == "book"){
         reservation() ;
@@ -210,10 +209,6 @@ int main(){
         }
         start = end+1 ;
         end = word1.find_first_of(" ",start);
-       // cout << space << "Press Enter 1 times to exit the program.";
-       //     cin.get();
-        //    cin.get();
-        //    moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
     end = word1.find_first_of(" ") ;
     while(end != -1){
@@ -224,10 +219,6 @@ int main(){
         }
         start = end+1 ;
         end = word1.find_first_of(" ",start);
-       // cout << space << "Press Enter 1 times to exit the program.";
-       //     cin.get();
-        //    cin.get();
-        //    moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
     return 0 ;
 }
