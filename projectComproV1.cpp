@@ -146,19 +146,25 @@ void reservation(){
             cout<< space << "Price : "<<total<<" bath"<<endl ;
             cout << endl ;
             cout << space << "**************************************************************" << endl ;
+            cout << endl ;
         }
 }
 
 void information(){
-    cout << " Compro project Hotel " ;
-    cout << " A double room. 600 bath/night " ;
-    cout << " A twin room. 800 bath/night " ;
-
+    string space = "                             " ;
+    int yes ;
+    system("cls");
+    Shownamehotel();
+    cout << space << " Compro project Hotel "<<endl ;
+    cout << space << " A double room. 600 bath/night "<<endl ;
+    cout << space << " A twin room. 800 bath/night " <<endl;
+    cout << space << "Press 1 to exit " ;
+    cin >> yes ;
 }
 
 int main(){
     string name , help ;
-    string word ;
+    string word , word1;
     string space = "                             " ;
     system("mode 0,0");
     system("COLOR 3F");
@@ -166,14 +172,14 @@ int main(){
     Shownamehotel() ;
     cout << space << "Hotel: Hello Compro project Hotel. May I help you? \n";
     cout << space << "user : ";
-    getline(cin,help) ;
-    cout << space << "Hotel: Would you like a single or a double room? \n" ;
-    cout << space << "user : ";
     getline(cin,word) ;
+    /*cout << space << "Hotel: Would you like a single or a double room? \n" ;
+    cout << space << "user : ";
+    getline(cin,word) ;*/
     word = word + " " ;
     int end = word.find_first_of(" ") ;
     while(end != -1){
-    if(word.substr(start,end-start) == "want"){
+    if(word.substr(start,end-start) == "book"){
         reservation() ;
         end = word.find_first_of(" ") ;
         break ;
@@ -181,6 +187,7 @@ int main(){
         start = end+1 ;
         end = word.find_first_of(" ",start);
     }
+    end = word.find_first_of(" ") ;
     while(end != -1){
     if(word.substr(start,end-start) == "information"){
         information() ;
@@ -192,35 +199,35 @@ int main(){
     }
     cout << space << "Hotel: Can i help you anything with? \n" ;
     cout << space << "user : " ;
-    getline(cin,word) ;
-    word = word + " " ;
+    getline(cin,word1) ;
+    end = word1.find_first_of(" ") ;
+    word1 = word1 + " " ;
     while(end != -1){
-        if(word.substr(start,end-start) == "book"){
+        if(word1.substr(start,end-start) == "book"){
         reservation() ;
-        end = word.find_first_of(" ") ;
+        end = word1.find_first_of(" ") ;
         break ;
         }
         start = end+1 ;
-        end = word.find_first_of(" ",start);
-        // cout << endl ;
-        // cout << space << "Press Enter 1 times to exit the program.";
-        //     cin.get();
-        //     cin.get();
-        //     moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
+        end = word1.find_first_of(" ",start);
+       // cout << space << "Press Enter 1 times to exit the program.";
+       //     cin.get();
+        //    cin.get();
+        //    moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
+    end = word1.find_first_of(" ") ;
     while(end != -1){
-    if(word.substr(start,end-start) == "information"){
+    if(word1.substr(start,end-start) == "information"){
         information() ;
-        end = word.find_first_of(" ") ;
+        end = word1.find_first_of(" ") ;
         break ;
         }
         start = end+1 ;
-        end = word.find_first_of(" ",start);
-        // cout << endl ;
-        // cout << space << "Press Enter 1 times to exit the program.";
-        //     cin.get();
-        //     cin.get();
-        //     moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
+        end = word1.find_first_of(" ",start);
+       // cout << space << "Press Enter 1 times to exit the program.";
+       //     cin.get();
+        //    cin.get();
+        //    moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
     }
     return 0 ;
 }
