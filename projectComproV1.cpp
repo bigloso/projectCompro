@@ -6,8 +6,7 @@
 using namespace std;
 #ifdef _MSC_VER
 #define getch() _getch()
-#endif
-
+#endifn
 using namespace std ;
 
 void Shownamehotel(){
@@ -147,6 +146,10 @@ void reservation(){
             cout << endl ;
             cout << space << "**************************************************************" << endl ;
             cout << endl ;
+            cout << space << "Press Enter 1 times to exit the program.";
+            cin.get();
+            cin.get();
+            moveText("***************THANKS COMPLATION LIST*************Thank you for booking***************",113) ;
         }
 }
 
