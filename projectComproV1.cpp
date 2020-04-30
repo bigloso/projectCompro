@@ -196,7 +196,7 @@ int main(){
     cout << "user: " ;
     getline(cin,word) ;
     word = word + " " ;
-        if(word.substr(start,end-start) == "reservation"){
+        if(word.substr(start,end-start) == "book"){
         reservation() ;
         end = word.find_first_of(" ") ;
         break ;
